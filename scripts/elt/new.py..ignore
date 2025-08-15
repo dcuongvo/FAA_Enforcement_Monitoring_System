@@ -1,0 +1,61 @@
+import fitz  # PyMuPDF
+import re
+import pandas as pd
+
+# Load and extract text from PDF
+pdf_path = "data/raw/faa_enforcement_data/q3-15.pdf"
+doc = fitz.open(pdf_path)
+all_text = "\n".join([page.get_text() for page in doc])
+lines = all_text.split("\n")
+# ------------------------------------------------------
+# group text into each row (record)
+records = []
+current = []
+case_started = False
+for line in lines:
+    line = line.strip()
+    if not line:
+        continue
+
+    if re.match(r"^\d{4}[A-Z]{2,3}\d{5,6}", line):
+        case_started = True
+        if current:
+            records.append(" ".join(current))
+        current = [line]
+    else:
+        if case_started:
+            current.append(line)
+
+# Add the last record
+if current:
+    records.append(" ".join(current))
+#------------------------------------------------------------------
+case_number_pattern = re.compile(r"^\d{4}[A-Z]{2,3}\d{5,6}")
+
+for i, record in enumerate(records):
+    match = case_number_pattern.search(record)
+    if match:
+        case_number = match.group()
+        print(f"{i+1}. CASE NUMBER: {case_number}")
+    else:
+        print(f"{i+1}. ❌ No case number found in record.")
+#--------------------------------------------------------------------
+# Extract feature from each record
+#--------------------------------------------------------------------
+#Constants
+from extract.record_extractor import record_extractor
+#------------------------------------------------------------------------------------------
+# Run and print
+for i, rec in enumerate(records, 1):
+    print(rec)
+    row = record_extractor(rec)
+    print(f"{i}. CASE NUMBER : {row['CASE NUMBER']}")
+    print(f"   NAME        : {row['NAME']}")
+    print(f"   ENTITY TYPE : {row['ENTITY TYPE']}")
+    print(f"   DATE KNOWN  : {row['DATE KNOWN']}")
+    print(f"   ACTION      : {row['ACTION']}")
+    print(f"   SACTION AMOUNT : {row['SANCTION AMOUNT']}")
+    print(f"   SACTION TYPE   : {row['SANCTION']}")
+    print(f"   CASE TYPE      : {row['CASE TYPE']}")
+    print(f"   CLOSED DATE    : {row['CLOSED DATE']}")
+

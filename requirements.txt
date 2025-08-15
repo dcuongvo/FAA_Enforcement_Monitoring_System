@@ -1,0 +1,22 @@
+# ============================
+# Core Data & Analysis Tools
+# ============================
+pandas
+numpy
+matplotlib
+scikit-learn
+
+# ============================
+# Dashboard / Visualization
+# ============================
+streamlit
+seaborn
+
+# ============================
+# Web Requests & File Handling
+# ============================
+requests          # For downloading data from FAA/NASA URLs
+openpyxl          # For reading Excel (.xlsx) files with pandas
+pyyaml            # For reading config.yaml files
+pymupdf           # For PDF parsing (PyMuPDF)
+
