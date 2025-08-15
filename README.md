@@ -14,7 +14,7 @@ You can access the raw enforcement data here:
 
 ## Features
 
-### ✅ Current Capabilities
+### Current Capabilities
 - **Automated ELT Pipeline**  
   - Extracts raw FAA enforcement reports from multiple formats (PDF, XLSX, CSV).  
   - Cleans, standardizes, and merges data into a unified schema.  
@@ -31,7 +31,7 @@ You can access the raw enforcement data here:
 
 ---
 
-### 🚀 Planned Enhancements (Stretch Goals)  
+### Planned Enhancements (Stretch Goals)  
 - **Interactive Dashboard**  
   - Build with Power BI / Tableau / Plotly Dash for dynamic filtering and visualization.  
 
