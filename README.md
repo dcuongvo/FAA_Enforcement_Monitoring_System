@@ -123,3 +123,5 @@ Example snippet from processed dataset (`faa_enforcement_final_cleaned.csv`):
 - **Data Engineering:** ETL Pipelines, Data Cleaning, Data Standardization  
 - **Cloud (Stretch Goal):** AWS Lambda, S3, CloudWatch, CI/CD  
 
+## License
+This project is released under the [MIT License](LICENSE).

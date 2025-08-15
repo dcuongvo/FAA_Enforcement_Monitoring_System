@@ -1,0 +1,43 @@
+# ==============================
+# Python Cache & Compiled Files
+# ==============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ==============================
+# Virtual Environment
+# ==============================
+venv/
+.env/
+
+# ==============================
+# Jupyter Notebook Checkpoints
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# System Files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Data Files (Optional: Ignore raw data to keep repo light)
+# ==============================
+data/raw/
+FAA_Quarterly_Reports/
+
+# ==============================
+# Output / Generated Files
+# ==============================
+output.csv
+*.xlsx
+*.csv
+
+# ==============================
+# IDE Settings
+# ==============================
+.vscode/
+.idea/
