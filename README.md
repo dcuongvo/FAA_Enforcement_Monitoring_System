@@ -116,10 +116,10 @@ Example snippet from processed dataset (`faa_enforcement_final_cleaned.csv`):
 | 2006WP170451 | MESA AIRLINES INC                | ASSESS CIVIL PENALTY | 55000.0         | DOLLARS  | HAZ MAT        | 2010-01-05  |
 | 2009WP530068 | HAWAIIAN AIRLINES INC            | ASSESS CIVIL PENALTY | 14000.0         | DOLLARS  | FLT OPNS       | 2010-01-08  |
 
-## Example use for analysis
 ## Analysis Highlights
 
 ### Industry-Wide Trends
+![Normalized FAA Trends](charts/normalized_trend.png)
 Enforcement activity shows industry-level spikes and declines:
 - Cases, sanctions, and revocations peaked around **2010–2012**.  
 - A secondary spike in **2020** sanctions occurred despite fewer cases, likely tied to **COVID-19 disruptions**.  
@@ -127,6 +127,7 @@ Enforcement activity shows industry-level spikes and declines:
 ---
 
 ### Company Comparisons
+![Top 10 Companies by Cases and Sanctions](charts/top_10_in_number_case_and_sanctions.png)
 Case frequency and financial impact differ widely by company:
 - **FedEx** and **American Airlines** dominate by number of cases.  
 - **Boeing**, despite fewer cases, ranks **#2 in total sanctions ($)** — indicating fewer but costlier penalties.  
@@ -134,11 +135,10 @@ Case frequency and financial impact differ widely by company:
 ---
 
 ### Boeing Case Study
+![Boeing Sanctions Over Time](charts/boeing_sanctions_over_time.png)
 Boeing’s sanctions are concentrated in only two years:
 - **2010:** Two civil penalties totaling **$3.5M**.  
-- **2019:** Multiple quality-control cases, with one penalty alone reaching **$27M**.  
-- Several cases marked as **“consolidated”** or **“sanction waived”**, reflecting negotiation or case grouping.  
-
+- **2019:** Multiple entries consolidated into two cases, one of which involved a quality-control penalty of $27M. 
 
 ---
 
